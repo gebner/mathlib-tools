@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+print("this far")
 
 import os.path
 import os
@@ -23,6 +24,7 @@ if self_update:
     os.system("curl {%s}/{%s}/{%s} -sSf | sh" % (mathlib_url,branch,installer_path))
 else:
     # find root of project and leanpkg.toml
+    print("this far")
     cwd = os.getcwd()
     while not os.path.isfile('leanpkg.toml') and os.getcwd() != '/':
         os.chdir(os.path.dirname(os.getcwd()))
